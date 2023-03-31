@@ -5,11 +5,16 @@
   color: $gray6B;
   font-size: 14px;
   font-weight: 600;
-  margin-bottom: 15px;
-  &-primary {
+  a {
+    display: block;
+  }
+  &.primary {
     background-color: $grayF3;
   }
-  &-secondary {
+  &.secondary {
     background-color: white;
+  }
+  &.mb {
+    margin-bottom: 15px;
   }
 }

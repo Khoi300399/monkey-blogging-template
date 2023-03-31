@@ -1,0 +1,21 @@
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 600;
+
+  &.white {
+    color: white;
+  }
+  &.black {
+    color: $gray6B;
+  }
+  .dot {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background-color: currentColor;
+    border-radius: 100rem;
+  }
+}

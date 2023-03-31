@@ -1,0 +1,34 @@
+.post-image {
+  &.feature {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+  }
+  &.newest {
+    display: block;
+    flex-shrink: 0;
+    width: 180px;
+    height: 130px;
+    border-radius: 12px;
+  }
+  &.newest-large {
+    display: block;
+    margin-bottom: 16px;
+    height: 433px;
+    border-radius: 16px;
+  }
+  &.post {
+    height: 202px;
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+    border-radius: 16px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+}
