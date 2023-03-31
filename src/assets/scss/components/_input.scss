@@ -1,0 +1,36 @@
+.relative {
+  position: relative;
+  min-width: 100%;
+}
+
+.input {
+  min-width: 100%;
+  padding: 20px;
+  background-color: $input-color;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: all 0.2s linear;
+  &::placeholder {
+    color: $placeholder-color;
+  }
+
+  &:focus {
+    background-color: white;
+    border-color: $primary-color;
+  }
+}
+
+.input-active-eye {
+  padding: 20px 60px 20px 20px;
+}
+
+.input-error {
+  border: 2px solid $error-color;
+}
+
+.error-massage {
+  color: $error-color;
+  padding-left: 20px;
+  font-size: 14px;
+  font-weight: 600px;
+}

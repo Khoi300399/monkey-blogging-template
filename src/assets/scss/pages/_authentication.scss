@@ -1,0 +1,31 @@
+.authentication {
+  min-height: 100vh;
+  padding: 40px;
+
+  &-logo {
+    margin: 0 auto 20px;
+  }
+
+  &-heading {
+    text-align: center;
+    @include text(40px, 600, $primary-color);
+    margin-bottom: 60px;
+  }
+
+  &-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .text-signin {
+    text-align: right;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .link-signin {
+    text-decoration: none;
+    color: $primary-color;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}

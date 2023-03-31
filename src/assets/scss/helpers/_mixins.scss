@@ -1,0 +1,10 @@
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin text($fs, $fw, $color: #ffffff) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $color !important;
+}

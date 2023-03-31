@@ -1,0 +1,41 @@
+.banner {
+  font-family: $secondary-font;
+  min-height: 520px;
+  padding: 0 40px;
+  margin-top: 44px;
+  background-image: linear-gradient(
+    to right bottom,
+    $primary-color,
+    $secondary-color
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-content {
+    max-width: 600px;
+    color: white;
+  }
+
+  &-heading {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 28px;
+  }
+
+  &-desc {
+    width: 420px;
+    line-height: 1.75;
+    margin-bottom: 48px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  &-button {
+    background-color: white;
+    color: $text-primary;
+    padding: 16px 43px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}

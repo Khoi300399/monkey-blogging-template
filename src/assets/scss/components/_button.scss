@@ -1,0 +1,31 @@
+.button {
+  outline: none;
+  border: 1px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 22px;
+  line-height: 1;
+  height: 65px;
+  width: 100%;
+  color: white;
+  @include text(18px, 600);
+  background-image: linear-gradient(
+    to right bottom,
+    $primary-color,
+    $secondary-color
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &-loading {
+    padding: 0 126px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

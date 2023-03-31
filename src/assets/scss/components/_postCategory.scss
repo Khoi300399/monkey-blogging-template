@@ -1,0 +1,15 @@
+.post-category {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: $gray6B;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  &-primary {
+    background-color: $grayF3;
+  }
+  &-secondary {
+    background-color: white;
+  }
+}

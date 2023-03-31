@@ -1,0 +1,4 @@
+.label {
+  @include text(20px, 600, $label-color);
+  cursor: pointer;
+}
