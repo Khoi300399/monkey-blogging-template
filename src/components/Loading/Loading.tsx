@@ -1,9 +1,11 @@
 import React from "react";
 
-type Props = {};
+type Props = {
+  className?: string;
+};
 
-const Loading = (props: Props) => {
-  return <div className="loading"></div>;
+const Loading = ({ className }: Props) => {
+  return <div className={`loading ${className}`}></div>;
 };
 
 export default Loading;

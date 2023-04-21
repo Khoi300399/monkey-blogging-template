@@ -19,6 +19,7 @@ type Values = {
   fullname: string;
   email: string;
   password: string;
+  image: string;
 };
 
 const SignUp = (props: Props) => {
@@ -28,6 +29,7 @@ const SignUp = (props: Props) => {
     fullname: "",
     email: "",
     password: "",
+    image: "",
   };
   const [togglePassword, setTogglePassword] = useState<Boolean>(true);
   useEffect(() => {
@@ -111,11 +113,7 @@ const SignUp = (props: Props) => {
                 </p>
                 <Button
                   type="submit"
-                  className="button button-loading"
-                  style={{
-                    maxWidth: 350,
-                    margin: "0 auto",
-                  }}
+                  className="primary"
                   height={56}
                   isLoading={isSubmitting}
                   disabled={isSubmitting}

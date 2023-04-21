@@ -1,17 +1,16 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 type Props = {
   children: React.ReactNode;
   className?: string;
-  to?: string;
 };
 
-const PostCategory = ({ children, className = "primary", to = "/" }: Props) => {
+const PostCategory = ({ children, className = "primary" }: Props) => {
   return (
-    <div className={`post-category ${className}`}>
-      <NavLink to={to}>{children}</NavLink>
-    </div>
+    <Link to="" className={`post-category ${className}`}>
+      {children}
+    </Link>
   );
 };
 

@@ -2,3 +2,31 @@
   @include text(20px, 600, $label-color);
   cursor: pointer;
 }
+
+.labelTable {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  &.default {
+    background-color: #f3f4f6;
+    color: #6b7280;
+  }
+  &.success {
+    background-color: #d1fae5;
+    color: #10b981;
+  }
+  &.warning {
+    background-color: #fed7aa;
+    color: #f97316;
+  }
+  &.danger {
+    background-color: #fee2e2;
+    color: #ef4444;
+  }
+  &.link {
+    font-style: italic;
+    color: #cbd5e0;
+  }
+}

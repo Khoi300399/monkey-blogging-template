@@ -5,8 +5,7 @@
   cursor: pointer;
   padding: 22px;
   line-height: 1;
-  height: 65px;
-  width: 100%;
+
   color: white;
   @include text(18px, 600);
   background-image: linear-gradient(
@@ -14,6 +13,27 @@
     $primary-color,
     $secondary-color
   );
+
+  &.primary {
+    height: 65px;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  &.secondary {
+    height: 65px;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  &.create {
+    height: 55px;
+    max-width: 350px;
+    background-image: none;
+    background-color: $text-primary;
+    color: $text-primary;
+  }
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,11 +41,35 @@
     opacity: 0.5;
     pointer-events: none;
   }
+}
 
-  &-loading {
-    padding: 0 126px;
+.toggle {
+  &-container {
     display: flex;
-    justify-content: center;
     align-items: center;
+    transition-property: all;
+    border-radius: 20px;
+    padding: 0 2px;
+    cursor: pointer;
+    width: 70px;
+    height: 35px;
+    background-color: #d1d5db;
+    transition: all 0.2s linear;
+
+    &.on {
+      background-color: $primary-color;
+    }
+  }
+  &-circle {
+    display: inline-block;
+    background-color: #ffffff;
+    transition-property: all;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    transition: all 0.2s linear;
+    &.on {
+      transform: translateX(35px);
+    }
   }
 }

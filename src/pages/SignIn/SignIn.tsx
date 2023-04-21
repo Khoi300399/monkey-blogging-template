@@ -33,7 +33,8 @@ const SignIn = (props: Props) => {
 
   useEffect(() => {
     document.title = "Login Page";
-    if (userInfo.email) navigate("/");
+    console.log("userInfo", userInfo);
+    if (userInfo?.email) navigate("/");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -103,11 +104,7 @@ const SignIn = (props: Props) => {
                 </p>
                 <Button
                   type="submit"
-                  className="button button-loading"
-                  style={{
-                    maxWidth: 350,
-                    margin: "0 auto",
-                  }}
+                  className="primary"
                   isLoading={isSubmitting}
                   disabled={isSubmitting}
                 >

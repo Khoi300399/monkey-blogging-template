@@ -1,4 +1,4 @@
-import React from "react";
+import { memo } from "react";
 import { useField } from "formik";
 
 type Props = {
@@ -39,4 +39,4 @@ const Input = ({ className = "", children, ...props }: Props) => {
   );
 };
 
-export default Input;
+export default memo(Input);

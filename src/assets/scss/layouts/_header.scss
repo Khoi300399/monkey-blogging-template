@@ -15,28 +15,7 @@
     list-style: none;
     @include text(18px, 500, black);
   }
-  .search {
-    margin-left: auto;
-    padding: 15px 25px;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 320px;
-    display: flex;
-    align-items: center;
-    position: relative;
 
-    &-input {
-      flex: 1;
-      padding-right: 45px;
-    }
-    &-icon {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 25px;
-    }
-  }
   &-button {
     margin-left: 20px;
     height: 56px;

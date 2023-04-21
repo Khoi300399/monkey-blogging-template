@@ -16,3 +16,12 @@
     transform: translate(0, -150%);
   }
 }
+
+.tag {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgba(35, 187, 134, 0.2);
+  color: #23bb86;
+  font-weight: 600;
+}

@@ -1,0 +1,11 @@
+.categories {
+  &-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  tbody {
+    max-height: 681px;
+  }
+}

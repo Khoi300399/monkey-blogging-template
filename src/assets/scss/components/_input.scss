@@ -34,3 +34,87 @@
   font-size: 14px;
   font-weight: 600px;
 }
+
+.image-upload {
+  &-label {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    background-color: #f3f4f6;
+    justify-content: center;
+    align-items: center;
+    width: 520px;
+    height: 300px;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s linear;
+
+    &:hover {
+      border: 1px dashed $gray6B;
+    }
+
+    &.round {
+      width: 200px;
+      height: 200px;
+      border-radius: 100%;
+    }
+  }
+
+  .image-default {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+
+    img {
+      max-width: 80px;
+      margin-bottom: 1.25rem;
+    }
+
+    p {
+      font-weight: 600;
+    }
+  }
+  .immage-load {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .not-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #34d399;
+    transition-property: all;
+    width: 2.5rem;
+    height: 0.25rem;
+  }
+
+  .btn-trash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    visibility: hidden;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition-property: all;
+    color: #ef4444;
+    width: 60px;
+    height: 60px;
+    border: 1px dashed #ef4444;
+    padding: 10px;
+    border-radius: 100%;
+    // border: none;
+    opacity: 0;
+    transition: all 0.2 s linear;
+  }
+
+  &-label:hover > .btn-trash {
+    opacity: 1;
+    visibility: visible;
+  }
+}

@@ -1,0 +1,35 @@
+.table-action {
+  display: flex;
+  color: #6b7280;
+  align-items: center;
+  column-gap: 10px;
+
+  .action-item {
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+
+    &.view:hover {
+      border-color: transparent;
+      background-color: #feebc8;
+      color: #ed8936;
+    }
+    &.edit:hover {
+      border-color: transparent;
+      background-color: #bee3f8;
+      color: #63b3ed;
+    }
+    &.delete:hover {
+      border-color: transparent;
+      background-color: #fed7d7;
+      color: #f56565;
+    }
+  }
+}

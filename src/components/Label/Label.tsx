@@ -1,8 +1,8 @@
-import React from "react";
+import { memo } from "react";
 
 type Props = {
   children: React.ReactNode;
-  htmlFor: string;
+  htmlFor?: string;
 };
 
 const Label = ({ children, htmlFor = "" }: Props) => {
@@ -13,4 +13,4 @@ const Label = ({ children, htmlFor = "" }: Props) => {
   );
 };
 
-export default Label;
+export default memo(Label);

@@ -1,0 +1,38 @@
+.postManage {
+  font-family: $secondary-font;
+  &-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .table-img {
+    display: flex;
+    align-items: center;
+    column-gap: 0.75rem;
+    img {
+      width: 66px;
+      height: 55px;
+      object-fit: cover;
+      border-radius: 0.25rem;
+    }
+    &-content {
+      flex: 1 1 0%;
+      h3 {
+        font-weight: 600;
+      }
+      time {
+        color: #6b7280;
+        font-size: 14px;
+        line-height: 1.25rem;
+      }
+    }
+  }
+
+  .text-gray-500 {
+    color: #6b7280;
+  }
+
+  .mt-10 {
+    margin-top: 2.5rem;
+  }
+}

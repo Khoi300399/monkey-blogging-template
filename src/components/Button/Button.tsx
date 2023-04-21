@@ -27,13 +27,18 @@ const Button = ({
 
   if (href !== "" && typeof href === "string") {
     return (
-      <NavLink style={style} className={className} to={href}>
+      <NavLink style={style} className={`button ${className}`} to={href}>
         {child}
       </NavLink>
     );
   }
   return (
-    <button type={type} disabled={disabled} className={className} {...props}>
+    <button
+      type={type}
+      disabled={disabled}
+      className={`button ${className}`}
+      {...props}
+    >
       {child}
     </button>
   );

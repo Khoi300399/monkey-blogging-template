@@ -1,0 +1,39 @@
+.radio {
+  label {
+    position: relative;
+  }
+  input {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
+
+  &-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 500;
+    column-gap: 0.75rem;
+    .content {
+      border-radius: 100%;
+      width: 18px;
+      height: 18px;
+
+      &.bg-green {
+        background-color: #34d399;
+        border-color: #34d399;
+        color: white;
+      }
+      &.bg-gray {
+        background-color: #e5e7eb;
+        color: transparent;
+      }
+    }
+  }
+}

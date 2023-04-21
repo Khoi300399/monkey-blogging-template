@@ -1,27 +1,31 @@
-import React from "react";
+import { memo } from "react";
 import PostCategory from "../Post/PostCategory";
 import PostImage from "../Post/PostImage";
 import PostMeta from "../Post/PostMeta";
 import PostTitle from "../Post/PostTitle";
+import { PostType } from "../../redux/postReducer/postReducer";
 
-type Props = {};
+type Props = {
+  post: PostType;
+};
 
-const PostCard = (props: Props) => {
+const PostCard = ({ post }: Props) => {
   return (
     <div className="post-card">
       <PostImage
+        to={`/post-detail?id=${post.id}`}
         className="post"
-        src="https://images.unsplash.com/photo-1570993492881-25240ce854f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2290&q=80"
+        src={post.image || ""}
         alt="unsplash"
       />
-      <PostCategory className="primary mb">Kiến thức</PostCategory>
+      <PostCategory className="primary mb">{post.category?.name}</PostCategory>
 
-      <PostTitle className="normal black">
-        Hướng dẫn setup phòng cực chill dành cho người mới toàn tập
+      <PostTitle to={`/post-detail?id=${post.id}`} className="normal black">
+        {post.title}
       </PostTitle>
-      <PostMeta date="Mar 23" author="Andiez Le"></PostMeta>
+      <PostMeta date={post.createAt} authors={post.author}></PostMeta>
     </div>
   );
 };
 
-export default PostCard;
+export default memo(PostCard);

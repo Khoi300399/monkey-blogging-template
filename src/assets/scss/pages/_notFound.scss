@@ -1,0 +1,46 @@
+.not-found {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.92);
+  color: white;
+  .content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+
+    .logo {
+      display: inline-block;
+      margin-bottom: 40px;
+    }
+    .heading {
+      color: white;
+      font-size: 60px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .description {
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+    .back {
+      cursor: pointer;
+      display: inline-block;
+      padding: 15px 30px;
+      color: white;
+      background-image: linear-gradient(
+        to right top,
+        $primary-color,
+        $secondary-color
+      );
+      border-radius: 8px;
+      font-weight: 500;
+    }
+    .image {
+      max-width: 250px;
+      margin: 0 auto 40px;
+    }
+  }
+}

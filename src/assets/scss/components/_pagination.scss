@@ -1,0 +1,44 @@
+.pagination {
+  display: flex;
+  margin: 30px auto;
+  justify-content: center;
+  align-items: center;
+  gap: 0 10px;
+
+  &-list {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+  }
+
+  &-prev,
+  &-next {
+    border: transparent;
+
+    &:disabled {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &-prev,
+  &-next,
+  &-item {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    transition: all 0.2s;
+    &:hover {
+      color: white;
+      background-color: $secondary-color;
+    }
+  }
+  &-item.is-current {
+    color: white;
+    background-color: $secondary-color;
+  }
+}

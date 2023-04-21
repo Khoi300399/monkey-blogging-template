@@ -2,8 +2,8 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import { Button } from "../components/Button";
-import { IconSearch } from "../components/Icon";
 import { RootState } from "../redux/config";
+import { Search } from "../components/Dropdown";
 
 type Props = {};
 const menuLinks = [
@@ -22,11 +22,11 @@ const menuLinks = [
 ];
 const Header = (props: Props) => {
   const { userInfo } = useSelector((state: RootState) => state.userReducer);
-  function getLastName(name: string | null | undefined) {
-    if (!name) return "User";
-    const length = name.split(" ").length;
-    return name.split(" ")[length - 1];
-  }
+  // function getLastName(name: string | null | undefined) {
+  //   if (!name) return "User";
+  //   const length = name.split(" ").length;
+  //   return name.split(" ")[length - 1];
+  // }
   return (
     <div className="container">
       <div className="header">
@@ -41,30 +41,25 @@ const Header = (props: Props) => {
             </li>
           ))}
         </ul>
-        <div className="search">
-          <input
-            type="text"
-            className="search-input"
-            placeholder="Search posts ..."
-          />
-          <span className="search-icon">
-            <IconSearch />
-          </span>
-        </div>
+        <Search className="no-mb" placeholder="Search post ..."></Search>
         {!userInfo ? (
           <Button
             type="button"
             style={{ maxWidth: "150px" }}
-            href="/sign-up"
+            href="/sign-in"
             className="button header-button "
           >
-            Sign Up
+            Sign In
           </Button>
         ) : (
-          <div className="header-auth">
-            <span className="text-auth">Welcome back, </span>
-            <span className="text-primary">{getLastName(userInfo?.name)}</span>
-          </div>
+          <Button
+            type="button"
+            style={{ maxWidth: "150px" }}
+            href="/post-manage"
+            className="button header-button "
+          >
+            Dashboard
+          </Button>
         )}
       </div>
     </div>

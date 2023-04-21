@@ -9,9 +9,15 @@
 @import "./components/label";
 @import "./components/field";
 @import "./components/iconEye";
+@import "./components/radio";
+@import "./components/checkbox";
+@import "./components/dropdown";
 @import "./components/button";
+@import "./components/table";
+@import "./components/pagination";
 @import "./components/loading";
 @import "./components/heading";
+@import "./components/FormGroup";
 @import "./components/featureCard";
 @import "./components/postCard";
 @import "./components/newestCard";
@@ -19,9 +25,18 @@
 @import "./components/postTitle";
 @import "./components/postMeta";
 @import "./components/postImage";
+@import "./components/actions";
 
 @import "./layouts/header";
 @import "./layouts/banner";
+@import "./layouts/dashboardHeader";
+@import "./layouts/sidebar";
+@import "./layouts/postManage";
+@import "./layouts/userManage";
 
 @import "./pages/authentication";
 @import "./pages/home";
+@import "./pages/postDetail";
+@import "./pages/dashboard";
+@import "./pages/categories";
+@import "./pages/notFound";

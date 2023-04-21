@@ -1,3 +1,4 @@
 import Input from "./Input";
+import ImageUpload from "./ImageUpload";
 
-export { Input };
+export { Input, ImageUpload };
